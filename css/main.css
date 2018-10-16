@@ -108,11 +108,15 @@
     padding: 2.5rem 0;
 }
 
-#information img{
-    width: calc(100% / 3);
+#information .left_wrap{
+    width:32%;
+    float: left;
 }
-#information .information_wrap{
-    width: calc(200% /3);;
+#information .left_wrap img{
+    width: 100%;
+}
+#information .right_wrap{
+    width: 68%;
     padding-left: 1rem;
     float: right;
     height: 100%;
