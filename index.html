@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="nav" data-offset="88">
     <nav class="navbar navbar-expand-md navbar-dark fixed">
         <div class="container">
             <a class="navbar-brand py-3 anchor" href="body">
@@ -72,11 +73,11 @@
                 <p class="filter">上映中</p>
                 <p class="filter">即將上映</p>
             </div>
-            <div class="swiper-container W-100"id="movie_time_swiper">
+            <div class="swiper-container W-100" id="movie_time_swiper">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" type="button" data-toggle="modal" data-target="#page">
                             <img class="card-img-top shadow-lg" src="/img/poster/2018-10-09一個巨星的誕生-2.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">一個巨星的誕生</h5>
@@ -169,10 +170,10 @@
                     </div>
                 </div>
                 <div class="swiper-button-prev">
-                        <i class="fas fa-angle-left fa-3x swiper-button-prev-item text-white"></i>
+                    <i class="fas fa-angle-left fa-3x swiper-button-prev-item text-white"></i>
                 </div>
                 <div class="swiper-button-next">
-                        <i class="fas fa-angle-right fa-3x swiper-button-next-item text-white"></i>
+                    <i class="fas fa-angle-right fa-3x swiper-button-next-item text-white"></i>
                 </div>
             </div>
         </div>
@@ -182,7 +183,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 pr-md-5">
                     <h2 class="title">電影票價</h2>
-                    <img width="100%"src="/img/price_computer.png" alt="">
+                    <img width="100%" src="/img/price_computer.png" alt="">
                 </div>
                 <div class="col-12 col-md-6 pl-md-5">
                     <h2 class="title">注意事項</h2>
@@ -238,13 +239,85 @@
             <a>Copyright © 2017 CHIN CHIN Corporation. All Rights Reserved.</a>
             <div class="contact">
                 <div class="facebook_wrap shadow">
-                        <i class="fab fa-facebook-f fa-2x"></i>
+                    <i class="fab fa-facebook-f fa-2x"></i>
                 </div>
 
-                
+
             </div>
         </div>
 
+    </section>
+    <section id="page" class="modal">
+        <div class="container">
+            <div class="text-right">
+                    <i class="fas fa-times fa-3x"data-dismiss="modal"></i>
+            </div>
+            <div id="youtube">
+                    <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RyX4b4Q30QQ?rel=0&amp;showinfo=0"
+                                allowfullscreen></iframe>
+                        </div>
+            </div>
+            <div id="information" class="clearfix">
+                    <div class="left_wrap">
+                            <img src="http://www.photowant.com/photo101/ffen31213641/pl_ffen31213641_0005.jpg" alt="">
+                            <div class="d-flex flex-column p-5">
+                                <div class="py-3">
+                                    <h1>月光光新慌慌</h1>
+                                    <h3>Halloween</h2>
+                                </div>
+                                <div class="py-3 d-flex">
+                                    <div class="flex-grow-1 d-flex align-items-center">
+                                        <p>片長/106min</p>
+                                    </div>
+                                    <div class="w-50">
+                                        <img width="100%" src="/img/Icon-18+.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="py-3">
+                                    <h3>導演</h3>
+                                    <h5 class="text-right">大衛高登格林</h5>
+                                </div>
+                                <div class="py-3">
+                                    <h3>演員</h3>
+                                    <h5 class="text-right">潔美李寇蒂斯</h5>
+                                    <h5 class="text-right">尼克坎斯羅</h5>
+                                    <h5 class="text-right">詹姆斯朱德寇特尼</h5>
+                                    <h5 class="text-right">茱蒂葛瑞兒</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right_wrap p-5">
+                            <div class="d-flex flex-column">
+                                <h3>一聽</h3>
+                                <div class="d-flex flex-wrap">
+                                    <span class="m-3 p-3 bg-danger text-light">01:00</span><span class="m-3 p-3 bg-danger text-light ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light">01:00</span><span class="m-3 p-3 bg-danger text-light ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light ">01:00</span><span class="m-3 p-3 bg-danger text-light  ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light ">01:00</span><span class="m-3 p-3 bg-danger text-light  ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light ">01:00</span><span class="m-3 p-3 bg-danger text-light  ">01:00</span>
+                                </div>
+                                <h3>二聽</h3>
+                                <div class="d-flex flex-wrap">
+                                    <span class="m-3 p-3 bg-danger text-light">01:00</span><span class="m-3 p-3 bg-danger text-light ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light">01:00</span><span class="m-3 p-3 bg-danger text-light ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light ">01:00</span><span class="m-3 p-3 bg-danger text-light  ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light ">01:00</span><span class="m-3 p-3 bg-danger text-light  ">01:00</span>
+                                    <span class="m-3 p-3 bg-danger text-light ">01:00</span><span class="m-3 p-3 bg-danger text-light  ">01:00</span>
+                                </div>
+                            </div>
+                            <h1 class="py-3">劇情簡介</h1>
+                            <p class="p-3">洛莉斯特羅德與麥克邁爾斯將進行最後的對抗。<br>
+                                自從四十年前的萬聖節大屠殺之夜後，不死面具殺人魔的夢靨一直糾纏著她...。<br>
+        
+                                女星潔美李寇蒂斯回鍋飾演經典角色洛莉斯特羅德，她在40年前的萬聖夜驚險逃出麥克邁爾斯的魔掌，
+                                但可怕夢魘一直揮之不去，現在她將再度遭遇這位面具殺人犯。 </p>
+                        </div>
+            </div>
+        </div>
+         
+        
+ 
     </section>
 
 

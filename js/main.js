@@ -1,13 +1,4 @@
-// $(window).scroll(function(){
-//   var now = $(window).scrollTop();
-//   if(now != 0){
-//     $('nav').addClass('fixed');
-//     $('#home').css('padding-top',$('nav').height())
-//   }else{
-//     $('nav').removeClass('fixed');
-//     $('#home').css('padding-top','0')
-//   }
-// });
+
 $(document).ready(function () {
 
   $('.anchor').on('click', function (event) {
@@ -18,12 +9,6 @@ $(document).ready(function () {
       $('.collapse').collapse('hide')
   });
 
-  // $('.back').on('click', function (event) {
-  //     event.preventDefault();
-  //     $('html, body').animate({
-  //         scrollTop: 0
-  //     }, 600);
-  // });
 });
 
 
@@ -33,6 +18,10 @@ $(document).ready(function () {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      
       // If we need pagination
     pagination: {
         el: '#home_swiper .swiper-pagination',
@@ -59,6 +48,7 @@ $(document).ready(function () {
       spaceBetween: 40,
     
       direction: 'horizontal',
+      freeMode:true,
       loop: true,
       // If we need pagination
       navigation: {
@@ -84,6 +74,9 @@ $(document).ready(function () {
     $(this).addClass('active');
      
     });
-     
+    $('#myModal').modal('hide');
     });
-  
+
+    // $('body').scrollspy({ target: 'nav' })
+
+    
