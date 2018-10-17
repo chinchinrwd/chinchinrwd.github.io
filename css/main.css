@@ -2,15 +2,21 @@ body{
     font-family: 微軟正黑體;
     position: relative;
 }
-/* c4e4fb*/
+
 .title{
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
     color: #004499;
     border-bottom: 1px solid #004499;
 }
-section{
+
+.py-my{
     padding: 2.5rem 0;
+}
+
+.container-fluid{
+    max-width: 1200px;
+
 }
 nav{
     background-color: #004499;
@@ -30,9 +36,8 @@ nav.fixed{
 }
 #home{
     padding-top: 88px;
-    padding-bottom: 0;
 }
-#home .mycol{
+#home .bottom_row{
     position: absolute;
     margin: 0;
     bottom: 1rem;
@@ -64,28 +69,6 @@ nav.fixed{
 #movie_time{
     background-color: #000;
 }
-#movie_time .swiper-button-prev,#movie_time .swiper-button-next{
-    background-image: none;
-    top: 0;
-    margin-top: 0;
-    width: 4rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    cursor: unset;
-}
-#movie i {
-    cursor: pointer;
-    padding: 10px;
-}
-#movie_time .swiper-button-prev{
-    left: 0;
-}
-#movie_time .swiper-button-next{
-    right: 0;
-}
 #movie_time .filter-wrap{
     display: flex;
     justify-content: flex-end;
@@ -105,12 +88,47 @@ nav.fixed{
     border-right: 1px solid white;
 }
 
+#movie_time .swiper-button-prev,#movie_time .swiper-button-next{
+    background-image: none;
+    top: 0;
+    margin-top: 0;
+    width: 4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: unset;
+}
+#movie_time .swiper-button-next-item,#movie_time .swiper-button-prev-item{
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+#movie_time .swiper-button-prev{
+    left: 0;
+}
+#movie_time .swiper-button-next{
+    right: 0;
+}
+
+
+
 #promotions{
     background-color: #004499;
 }
+
+#promotions .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #f8f9fa;
+    margin-right: -15px;
+}
 #promotions .title{
-    color:  #c4e4fb;
-    border-bottom-color: #c4e4fb;
+    border-bottom-color: #004499;
 }
 #promotions p{
     color:  #c4e4fb;
@@ -119,9 +137,7 @@ nav.fixed{
     background-color: #c4e4fb;
 }
 
-#map{
-    padding: 0;
-}
+
 #map img{
     /* opacity: 0; */
     width: 100%;
@@ -137,9 +153,8 @@ nav.fixed{
 
 #footer{
     background-color: #004499;
-    padding: 0;
 }
-#footer .container{
+#footer .container-fluid{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,6 +176,7 @@ nav.fixed{
 
 
 @media (max-width:767px){
+
     .title{
         padding-top: 2rem;
     }
@@ -170,15 +186,35 @@ nav.fixed{
     #slide_1{
         height: 70vh;
     }
-    .swiper-button-next-item,.swiper-button-prev-item{
-        padding: 1rem;
+    #movie_time .filter{
+        width: 50%;
+        text-align: center;
+    }
+    #movie_time .swiper-button-prev,#movie_time .swiper-button-next{  
+        height: 100%;
+        align-items: center;    
+        background-color: unset;
     }
     .card-body{
         text-align: center;
     }
+  
     #ticket_price .title{
        text-align: center;
     }
+    #promotions .wrap{
+        margin-right: unset;
+    }
+    #promotions .wrap img{
+        margin-bottom: 5rem;
+    }
+    #promotions .wrap img:last-child{
+        margin-bottom: 0;
+    }
+    #ticket_price .my_col{
+        width: 50%;
+    }
+    
     #about .col-12.col-md-6:nth-child(2){
         order: -1;
     }

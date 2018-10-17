@@ -16,7 +16,7 @@
 
 <body data-spy="scroll" data-target="nav" data-offset="88">
     <nav class="navbar navbar-expand-md navbar-dark fixed">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand py-3 anchor" href="body">
                 <img src="/img/LOGO.png" alt="" height="40">
             </a>
@@ -37,7 +37,7 @@
         </div>
     </nav>
     <section id="home">
-        <div class="swiper-container W-100 h-100" id="home_swiper">
+        <div class="swiper-container" id="home_swiper">
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
@@ -49,7 +49,7 @@
                 <div class="swiper-slide bg-info">Slide 3</div>
                 <div class="swiper-slide bg-info">Slide 4</div>
             </div>
-            <div class="mycol">
+            <div class="bottom_row">
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev">
                     <i class="fas fa-angle-left fa-3x text-white"></i>
@@ -68,12 +68,12 @@
         </div>
     </section>
     <section id="movie_time">
-        <div class="container">
+        <div class="container-fluid py-my">
             <div class="filter-wrap">
                 <p class="filter" data-filter="1">上映中</p>
                 <p class="filter" data-filter="2">即將上映</p>
             </div>
-            <div class="swiper-container W-100" id="movie_time_swiper1">
+            <div class="swiper-container" id="movie_time_swiper1">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
@@ -142,13 +142,13 @@
                 </div>
 
                 <div class="swiper-button-prev">
-                    <i class="fas fa-angle-left fa-3x swiper-button-prev-item text-white"></i>
+                    <i class="fas fa-angle-left fa-3x swiper-button-prev-item"></i>
                 </div>
                 <div class="swiper-button-next">
-                    <i class="fas fa-angle-right fa-3x swiper-button-next-item text-white"></i>
+                    <i class="fas fa-angle-right fa-3x swiper-button-next-item"></i>
                 </div>
             </div>
-            <div class="swiper-container W-100" id="movie_time_swiper2">
+            <div class="swiper-container " id="movie_time_swiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
@@ -198,74 +198,95 @@
                     </div>
                 </div>
                 <div class="swiper-button-prev">
-                    <i class="fas fa-angle-left fa-3x swiper-button-prev-item text-white"></i>
+                    <i class="fas fa-angle-left fa-3x swiper-button-prev-item"></i>
                 </div>
                 <div class="swiper-button-next">
-                    <i class="fas fa-angle-right fa-3x swiper-button-next-item text-white"></i>
+                    <i class="fas fa-angle-right fa-3x swiper-button-next-item"></i>
                 </div>
             </div>
 
         </div>
     </section>
     <section id="ticket_price">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <h2 class="title">電影票價</h2>
-                    <img class="shadow" width="100%" src="/img/price_computer.png" alt="">
+                    <div class="pr-md-3 py-my">
+                        <h2 class="title">電影票價</h2>
+                        <img class="shadow" width="100%" src="/img/price_computer.png" alt="">
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 pr-md-5">
-                    <h2 class="title">注意事項</h2>
-                    <li>優惠票須出示證件、會員須出示會員卡</li>
-                    <li>兒童票6歲以上未滿12歲須出示證件</li>
-                    <p class="mt-3 mb-0">
-                        持有身心障礙手冊(限陪同一位)，65歲以上購票及入場需出示證件(限本人使用)
-                        <br>未滿6歲幼童，限觀賞普遍級
-                        <br>未滿兩歲且不占位兒童可免費觀賞普遍級影片
-                    </p>
-                    <li>每位兒童至少需一位購票成人陪同</li>
-                    <p class="my-3">持優待/招待票觀賞3D影片需補80/150元</p>
-                    <p class="my-3"><span class="text-danger">申辦會員卡立即享會員優惠</span>，憑會員卡以現金購票
-                        <br>享優待票價並免費贈送爆米花及飲料
-                    </p>
-                    <p class="mt-3 mb-0">申辦會員卡期限兩年，酌收工本費100元
-                        <br>請至親親影城一樓票房現場申請辦理
-                        <br>(舊卡換新卡酌收50元)</p>
+                <div class="col-12 col-md-6">
+                    <div class="pl-md-3 py-my">
+                        <h2 class="title">注意事項</h2>
+                        <li>優惠票須出示證件、會員須出示會員卡</li>
+                        <li>兒童票6歲以上未滿12歲須出示證件</li>
+                        <p class="mt-3 mb-0">
+                            持有身心障礙手冊(限陪同一位)，65歲以上購票及入場需出示證件(限本人使用)
+                            <br>未滿6歲幼童，限觀賞普遍級
+                            <br>未滿兩歲且不占位兒童可免費觀賞普遍級影片
+                        </p>
+                        <li>每位兒童至少需一位購票成人陪同</li>
+                        <p class="my-3">持優待/招待票觀賞3D影片需補80/150元</p>
+                        <p class="my-3"><span class="text-danger">申辦會員卡立即享會員優惠</span>，憑會員卡以現金購票
+                            <br>享優待票價並免費贈送爆米花及飲料
+                        </p>
+                        <p class="mt-3 mb-0">申辦會員卡期限兩年，酌收工本費100元
+                            <br>請至親親影城一樓票房現場申請辦理
+                            <br>(舊卡換新卡酌收50元)</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="promotions">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="shadow">
-                        <img width="100%" src="http://www.ypdesigngroup.com/images/chinatrust-corporate-brand-signature.jpg"
-                            alt="">
+                    <div class="pr-md-3 wrap">
+                        <img class="shadow" width="100%" src="/img/中國信託-04.png" alt="">
+                        <img class="shadow" width="100%" src="/img/台新銀行-04.png" alt="">
+                        <img class="shadow" width="100%" src="/img/親親VIP優惠-04.png" alt="">
                     </div>
                 </div>
-                <div class="col-12 col-md-6 pl-md-5">
-                    <h2 class="title">優惠資訊</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita iste ducimus aspernatur
-                        officiis cupiditate, tenetur laudantium rerum. Libero ad laudantium totam vel molestiae,
-                        ratione blanditiis similique modi voluptatum harum cumque?</p>
+                <div class="col-12 col-md-6">
+                    <div class="py-my  pl-md-3 bg-light">
+                        <h2 class="title">優惠資訊</h2>
+                        <div class="mb-3">
+                            <h5 class="text-danger mb-1">親親影城刷中信卡不分平假日</h5>
+                            <span class="">一律享優待票價<br>107年1月1日起至107年12月31日止</span>
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="text-danger mb-1">親親影城刷台新卡不分平假日</h5>
+                            <span class="">一律享優待票價<br>107年1月1日起至107年12月31日止</span>
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="text-danger mb-1">憑會員卡現金購票</h5>
+                            <span class="">享優待票價並免費贈送<strong>爆米花+飲料+哈拉麵包15元折價卷</strong></span>
+                        </div>
+                        <div>
+                            <h5 class="text-danger mb-1">憑會員卡至哈拉烘焙消費</h5>
+                            <span class="">自製商品全享<strong>95</strong>折優惠</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="about">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-6 pr-md-5">
-                    <h2 class="title">關於親親</h2>
-                    <p>台中親親影城成立於1986年，為當地居民休閒娛樂為中心的電影城。
-                        設有國際標準的電影廳院，並在視覺方面配合超廣角大銀幕，給觀眾無障礙的視野空間，享受頂級的視覺饗宴；在聽覺方面，超清晰數位音訊，即使連一根尖針落地，都能清楚呈現。讓在影廳內任何座位的觀眾，都能完全融入電影情境中，感受到被電影場景所包覆的震撼體驗！
-
-                        影廳每廳皆採用進口高級座椅，座位寬敞舒適，劇場式的階梯椅座設計，內部全面採用高級吸音壁毯，搭配舒適的地毯設備，讓您如同置身豪華劇場中，讓看電影成為一種精緻且奢華的享受。</p>
+                <div class="col-12 col-md-6">
+                    <div class="pr-md-3 py-my">
+                        <h2 class="title">關於親親</h2>
+                        <p>台中親親影城成立於1986年，為當地居民休閒娛樂為中心的電影城。
+                            設有國際標準的電影廳院，並在視覺方面配合超廣角大銀幕，給觀眾無障礙的視野空間，享受頂級的視覺饗宴；在聽覺方面，超清晰數位音訊，即使連一根尖針落地，都能清楚呈現。讓在影廳內任何座位的觀眾，都能完全融入電影情境中，感受到被電影場景所包覆的震撼體驗！
+                            影廳每廳皆採用進口高級座椅，座位寬敞舒適，劇場式的階梯椅座設計，內部全面採用高級吸音壁毯，搭配舒適的地毯設備，讓您如同置身豪華劇場中，讓看電影成為一種精緻且奢華的享受。</p>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 pl-md-5">
-                    <div class="shadow">
-                        <img src="/img/about_img.png" alt="" width="100%">
+                <div class="col-12 col-md-6">
+                    <div class="pl-md-3 py-my">
+                        <img class="shadow" src="/img/about_img.png" alt="" width="100%">
                     </div>
                 </div>
             </div>
@@ -276,7 +297,7 @@
 
     </section>
     <section id="footer">
-        <div class="container">
+        <div class="container-fluid py-my">
             <a>Copyright © 2017 CHIN CHIN Corporation. All Rights Reserved.</a>
             <div class="contact">
                 <div class="facebook_wrap shadow">
@@ -289,7 +310,7 @@
 
     </section>
     <section id="page" class="modal">
-        <div class="container">
+        <div class="container-fluid">
             <div class="text-right">
                 <i class="fas fa-times fa-3x" data-dismiss="modal"></i>
             </div>

@@ -49,7 +49,7 @@ $(document).ready(function () {
       speed:1000,
       slidesPerView: 4,
       spaceBetween: 40,
-      
+      loop:true,
       direction: 'horizontal',
       freeMode:true,
       
@@ -71,7 +71,7 @@ $(document).ready(function () {
       speed:1000,
       slidesPerView: 4,
       spaceBetween: 40,
-
+      loop:true,
       direction: 'horizontal',
       freeMode:true,
       
@@ -112,12 +112,6 @@ $(document).ready(function () {
 
 
   $(document).ready(function () {
-    $('.nav-link').click(function (e) {
-    e.preventDefault();
-    $('.nav-link.active').removeClass('active');
-    $(this).addClass('active');
-     
-    });
     $('#myModal').modal('hide');
     });
 
