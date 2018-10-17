@@ -39,21 +39,24 @@ $(document).ready(function () {
       }
     })
   });
+
+
+
   $(document).ready(function () {
     //initialize swiper when document ready
-    var mySwiper = new Swiper ('#movie_time_swiper', {
+    var mySwiper = new Swiper ('#movie_time_swiper2', {
       // Optional parameters
       speed:1000,
       slidesPerView: 4,
       spaceBetween: 40,
-    
+      
       direction: 'horizontal',
       freeMode:true,
-      loop: true,
+      
       // If we need pagination
       navigation: {
-        nextEl: '#movie_time_swiper .swiper-button-next-item',
-        prevEl: '#movie_time_swiper .swiper-button-prev-item',
+        nextEl: '#movie_time_swiper2 .swiper-button-next-item',
+        prevEl: '#movie_time_swiper2 .swiper-button-prev-item',
       },
       breakpoints: {
         768: {
@@ -63,6 +66,47 @@ $(document).ready(function () {
       }
      
     })
+    var mySwiper = new Swiper ('#movie_time_swiper1', {
+      // Optional parameters
+      speed:1000,
+      slidesPerView: 4,
+      spaceBetween: 40,
+
+      direction: 'horizontal',
+      freeMode:true,
+      
+      // If we need pagination
+      navigation: {
+        nextEl: '#movie_time_swiper1 .swiper-button-next-item',
+        prevEl: '#movie_time_swiper1 .swiper-button-prev-item',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        }
+      }
+     
+    })
+  });
+
+
+  $(document).ready(function () {
+    $("#movie_time_swiper2").addClass('d-none');
+    
+    $('.filter').click(function (e) { 
+      e.preventDefault();
+      $('.filter.bg-danger').removeClass('bg-danger')
+      $(this).addClass('bg-danger');
+      if($(this).attr('data-filter') == 1){
+        $('#movie_time_swiper2').addClass('d-none');
+        $('#movie_time_swiper1').removeClass('d-none');
+      }else{
+        $('#movie_time_swiper1').addClass('d-none');
+        $('#movie_time_swiper2').removeClass('d-none');
+      }
+      
+    });
   });
 
 
@@ -78,5 +122,11 @@ $(document).ready(function () {
     });
 
     // $('body').scrollspy({ target: 'nav' })
+function get_information(){
+  $.getJSON("/json/information.json",
+    function (data) {
+        console.log(data)
+    }
+  );
+}
 
-    
