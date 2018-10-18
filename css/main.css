@@ -10,6 +10,9 @@ body{
     color: #004499;
     border-bottom: 1px solid #004499;
 }
+.w-50-md-25{
+    width: 25%;
+}
 
 .py-my{
     padding: 2.5rem 0;
@@ -67,6 +70,10 @@ nav.fixed{
     margin-top: 0;
     background-image: none;
     position: static;
+}
+#home i {
+    text-shadow: -5px 0 2px black, 0 5px 2px black, 5px 0 2px black, 0 -5px 2px black;
+
 }
 #home .swiper-pagination{
     position: static;
@@ -140,6 +147,7 @@ nav.fixed{
     padding: 1rem;
     cursor: pointer;
     color: white;
+    text-shadow: -5px 0 2px black, 0 5px 2px black, 5px 0 2px black, 0 -5px 2px black;
 }
 
 #movie_time .swiper-button-prev{
@@ -203,6 +211,7 @@ nav.fixed{
 
 #footer{
     background-color: #004499;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 #footer .container-fluid{
     display: flex;
@@ -226,7 +235,9 @@ nav.fixed{
 
 
 @media (max-width:767px){
-
+    .w-50-md-25{
+        width: 50%;
+    }
     .title{
         padding-top: 2rem;
     }
@@ -256,9 +267,7 @@ nav.fixed{
        text-align: center;
     }
     
-    #ticket_price #price1{
-        display: none;
-    }
+
     #ticket_price #price2{
         display: block;
     }

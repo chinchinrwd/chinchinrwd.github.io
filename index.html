@@ -50,14 +50,14 @@
                         <img width="100%" src="/img/banner/怪物遊戲2banner.jpg" alt="">
                     </div>
                 </div>
-                <div class="swiper-slide bg-info">
+                <div class="swiper-slide align-self-end">
                     <div id="slide_3">
-                        <img src="/img/banner/怪獸與格林戴華banner.jpg" alt="">
+                        <img height="100%" src="/img/banner/怪獸與格林戴華banner.jpg" alt="">
                     </div>
                 </div>
                 <div class="swiper-slide bg-info">
                     <div id="slide_4">
-                        <img src="/img/banner/登月先鋒banner.jpg" alt="">
+                        <img width="100%" src="/img/banner/登月先鋒banner.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@
     <section id="movie_time">
         <div class="container-fluid py-my">
             <div class="filter-wrap">
-                <p class="filter" data-filter="1">上映中</p>
-                <p class="filter" data-filter="2">即將上映</p>
+                <p class="filter bg-danger" data-filter="#movie_time_swiper2">上映中</p>
+                <p class="filter" data-filter="#movie_time_swiper1">即將上映</p>
             </div>
             <div class="swiper-container" id="movie_time_swiper1">
                 <div class="swiper-wrapper">
@@ -160,7 +160,7 @@
                     <i class="fas fa-angle-right fa-3x swiper-button-next-item"></i>
                 </div>
             </div>
-            <div class="swiper-container " id="movie_time_swiper2">
+            <div class="swiper-container" id="movie_time_swiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
@@ -225,27 +225,46 @@
                 <div class="col-12 col-md-6">
                     <div class="pr-md-3 py-my h-100 d-flex flex-column">
                         <h2 class="title">電影票價</h2>
-                        <img id="price1" class="shadow" width="100%" src="/img/price_computer.png" alt="">
-                        <img id="price2" class="shadow" width="100%" src="/img/price_mobile.png" alt="">
-                        <!-- <div class="d-flex flex-grow-1 mb-3 flex-column border border-secondary">
-                            <div class="flex-grow-1">
-                                <div class="w-25 h-100 d-flex flex-column justify-content-around text-center">
-                                    <h4>全票</h4>
-                                    <p>一般成人</p>
-                                    <h4>215</h4>
-                                </div>
+                        <!-- <img id="price1" class="shadow" width="100%" src="/img/price_computer.png" alt="">
+                        <img id="price2" class="shadow" width="100%" src="/img/price_mobile.png" alt=""> -->
+                        <div class="d-flex flex-wrap mb-3  text-center ">
+                            <div class="w-50-md-25 d-flex flex-column py-2 px-3">
+                                <h4 class="text-light bg-primary mb-3">全票</h4>
+                                <h6 class="text-primary mb-3">一般城人</h6>
+                                <h4 class="text-primary">210元</h4>
                             </div>
-                            <div class="py-1">
-                                <p class="text-center">3D</p>
+                            <div class="w-50-md-25 d-flex flex-column py-2 px-3">
+                                <h4 class="text-light bg-primary mb-3">優待票</h4>
+                                <h6 class="text-primary mb-3">一般城人</h6>
+                                <h4 class="text-primary">190元</h4>
                             </div>
-                            <div class="py-1">
-                                <div class="w-25">
-                                    <h6 class="text-center">300元</h6>
-                                </div>
+                            <div class="w-100 py-1 border border-secondary  order-md-1"><span><strong>3D</strong></span></div>
+                            <div class="w-50-md-25 py-2 text-primary order-md-1">
+                                <h4 class="text-primary">300元</h4>
                             </div>
-                            
-                        </div> -->
-                        <!-- <h4 class="text-center py-2 bg-primary text-light">持會員卡享優待票 贈送爆米花及飲料</h4> -->
+                            <div class="w-50-md-25 py-2 text-primary mb-4 mb-md-0 order-md-1">
+                                <h4 class="text-primary">280元</h4>
+                            </div>
+                            <div class="w-50-md-25 d-flex flex-column py-2 px-3">
+                                <h4 class="text-light bg-primary mb-3">兒童票</h4>
+                                <h6 class="text-primary mb-3">一般城人</h6>
+                                <h4 class="text-primary">150元</h4>
+                            </div>
+                            <div class="w-50-md-25 d-flex flex-column py-2 px-3">
+                                <h4 class="text-light bg-primary mb-3">愛心票</h4>
+                                <h6 class="text-primary mb-3">一般城人</h6>
+                                <h4 class="text-primary">105元</h4>
+                            </div>
+                            <div id="price2" class="w-100 py-1 border border-secondary"><span><strong>3D</strong></span></div>
+                            <div class="w-50-md-25 py-2 text-primary order-md-1">
+                                <h4 class="text-primary">210元</h4>
+                            </div>
+                            <div class="w-50-md-25 py-2 text-primary order-md-1">
+                                <h4 class="text-primary">150元</h4>
+                            </div>
+
+                        </div>
+                        <h4 class="text-center py-2 bg-primary text-light">持會員卡享優待票 贈送爆米花及飲料</h4>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
