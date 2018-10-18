@@ -30,11 +30,26 @@ nav.fixed{
     left: 0;
     z-index: 4;
 }
-.nav-item.active{
-    background-color: #000;
+.nav-item{
+    font-size: 1.1rem;
 }
 .nav-item:hover{
-    border: 2px solid rgba(255, 255, 255, 0.6); 
+   position: relative;
+   transition: 1s;
+  }
+  .nav-item:hover::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right:calc(50% - 15px);
+    border-bottom: 1px solid white;
+    height: 30px;
+    width: 30px;
+    
+   }
+
+.nav-item.active{
+    background-color: rgba(255, 255, 255, 0.452);
 }
 #home{
     padding-top: 88px;
@@ -75,9 +90,9 @@ nav.fixed{
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid white;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
-#movie_time .filter{
+#movie_time .filter{ 
     padding: 3px 20px;
     color: white;
     cursor: pointer;
@@ -89,7 +104,9 @@ nav.fixed{
 #movie_time .filter:first-child{
     border-right: 1px solid white;
 }
-
+#movie_time .swiper-container{
+    overflow: visible;
+}
 #movie_time .swiper-button-prev,#movie_time .swiper-button-next{
     background-image: none;
     top: 0;
@@ -114,6 +131,22 @@ nav.fixed{
 #movie_time .swiper-button-next{
     right: 0;
 }
+.card:hover{
+    background-color: rgba(95, 105, 230, 0.5);
+    color: white;
+    text-align: center;
+    transform: scale(1.1);
+    -webkit-box-shadow: 0 0 15px 5px #fdfdfdd3;
+	-moz-box-shadow: 0 0 15px 5px #fdfdfdd3;
+	box-shadow: 0 0 15px 5px #fdfdfdd3;
+    
+}
+
+.card:hover .card-text{
+    display: none;
+}
+
+
 #ticket_price #price2{
     display: none;
 }

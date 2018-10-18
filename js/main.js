@@ -92,8 +92,9 @@ $(document).ready(function () {
 
 
   $(document).ready(function () {
+
     $("#movie_time_swiper2").addClass('d-none');
-    
+    $("[data-filter='1']").addClass('bg-danger');
     $('.filter').click(function (e) { 
       e.preventDefault();
       $('.filter.bg-danger').removeClass('bg-danger')
