@@ -21,6 +21,7 @@ body{
 }
 nav{
     background-color: #004499;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 nav.fixed{
     position: fixed;
@@ -113,8 +114,9 @@ nav.fixed{
 #movie_time .swiper-button-next{
     right: 0;
 }
-
-
+#ticket_price #price2{
+    display: none;
+}
 
 #promotions{
     background-color: #004499;
@@ -137,18 +139,17 @@ nav.fixed{
 }
 
 
-#map img{
-    /* opacity: 0; */
-    width: 100%;
+#map {
+   height: 50vh;
 }
-/* #map {
+#map {
     background-attachment: fixed;
     background-image: url(/img/map.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center 180px;
     
-} */
+}
 
 #footer{
     background-color: #004499;
@@ -195,7 +196,7 @@ nav.fixed{
         background-color: unset;
     }
     #movie_time .swiper-container{
-        width: 80%;
+        width: 70%;
     }
     .card-body{
         text-align: center;
@@ -203,6 +204,13 @@ nav.fixed{
   
     #ticket_price .title{
        text-align: center;
+    }
+    
+    #ticket_price #price1{
+        display: none;
+    }
+    #ticket_price #price2{
+        display: block;
     }
     #promotions .wrap{
         margin-right: unset;
@@ -284,4 +292,8 @@ nav.fixed{
         padding-left: 0;
     }
     
+}
+
+.border-dashed{
+    border-right-style: dashed;
 }
