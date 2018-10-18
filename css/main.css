@@ -90,7 +90,7 @@ nav.fixed{
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid white;
-    margin-bottom: 2.5rem;
+    
 }
 #movie_time .filter{ 
     padding: 3px 20px;
@@ -105,8 +105,9 @@ nav.fixed{
     border-right: 1px solid white;
 }
 #movie_time .swiper-container{
-    overflow: visible;
+    padding: 2.5rem 0;
 }
+
 #movie_time .swiper-button-prev,#movie_time .swiper-button-next{
     background-image: none;
     top: 0;
