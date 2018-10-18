@@ -75,11 +75,27 @@ nav.fixed{
     margin: 0 1rem;
 }
 #slide_1{
-    background-image: url('/img/怪物遊戲2-banner_工作區域\ 1.png');
+    background-image: url('/img/banner/一個巨星的誕生banner.jpg');
     background-size: cover;
     background-position: 70% center;
 }
-#slide_1 img{
+#slide_2{
+    background-image: url('/img/banner/怪物遊戲2banner.jpg');
+    background-size: cover;
+    background-position: 70% center;
+}
+#slide_3{
+    background-image: url('/img/banner/怪獸與格林戴華banner.jpg');
+    background-size: cover;
+    background-position: 70% center;
+}
+#slide_4{
+    background-image: url('/img/banner/登月先鋒banner.jpg');
+    background-size: cover;
+    background-position: 90% center;
+}
+
+#home img{
     opacity: 0;
     width: 100%;
 }
@@ -217,8 +233,8 @@ nav.fixed{
     .nav-item{
         text-align: center;
     }
-    #slide_1{
-        height: 70vh;
+    #slide_1,#slide_2,#slide_3,#slide_4{
+        height:40vh;
     }
     #movie_time .filter{
         width: 50%;
