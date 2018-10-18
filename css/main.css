@@ -6,6 +6,7 @@ body{
 .title{
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
+    line-height: 1em;
     color: #004499;
     border-bottom: 1px solid #004499;
 }
@@ -124,9 +125,7 @@ nav.fixed{
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    background-color: #f8f9fa;
-    margin-right: -15px;
-}
+   }
 #promotions .title{
     border-bottom-color: #004499;
 }
@@ -194,6 +193,9 @@ nav.fixed{
         height: 100%;
         align-items: center;    
         background-color: unset;
+    }
+    #movie_time .swiper-container{
+        width: 80%;
     }
     .card-body{
         text-align: center;
