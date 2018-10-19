@@ -2,6 +2,10 @@ body{
     font-family: 微軟正黑體;
     position: relative;
 }
+#page::-webkit-scrollbar { 
+    display: none; 
+}
+
 
 .title{
     padding-bottom: 1.5rem;
@@ -329,16 +333,17 @@ nav.fixed{
     color: white;
     position: fixed;
     top:20px;
-    right:calc(50% - 576.5px);
+    
     padding:10px 17.5px;
     background-color: rgba(0, 0, 0, 0.719);
     border-radius: 3px;
 }
 @media (max-width:1250px){
     #page i{
-        right:49.5px;
+        right:32.5px;
     }
 }
+
 #youtube{
     background-color: #000;
     padding-bottom: 2.5rem;
@@ -347,7 +352,9 @@ nav.fixed{
     padding: 2.5rem 0;
     background-color: white;
 }
-
+#information img:first-child{
+    width: 100%;
+}
 #information .w-md-38{
     width:38.2%;
 }
@@ -358,11 +365,15 @@ nav.fixed{
 
 
 @media (max-width:767px){
+
     #youtube{
         display: none;
     }
     #information{
         padding-top: 0;
+    }
+    #information img:first-child{
+        width:80%;
     }
     #information .w-md-38{
         width: 100%;
@@ -374,4 +385,7 @@ nav.fixed{
 
 .border-dashed{
     border-right-style: dashed;
+}
+.rounded{
+    border-radius: 0.5rem!important;
 }

@@ -1,5 +1,7 @@
 
 $(document).ready(function () {
+    
+    AOS.init();
 
     $('.anchor').on('click', function (event) {
         event.preventDefault();
@@ -105,6 +107,7 @@ $(document).ready(function () {
         }
 
     });
+    
 });
 
 
