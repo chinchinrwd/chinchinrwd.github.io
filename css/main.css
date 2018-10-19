@@ -175,7 +175,31 @@ nav.fixed{
 #ticket_price #price2{
     display: none;
 }
+#ticket_price .price_title{
+    border-radius : 12px;
+    background-color: #004499;
+    padding: 12px;
+}
+#ticket_price .price_content{
+    font-weight : bold;
+    color: #004499;
+}
+#ticket_price .price_price{
+    font-weight : bold;
+    color: #004499;
+    font-family : 'Impact';
+}
+#ticket_price .price_co{
+    font-size: 12px;
+    font-family : '微軟正黑體';
+}
 
+#ticket_price .price_3d{
+    font-family : 'Impact';
+    font-size: 1.5rem;
+    border-top:1px solid #004499;
+    border-bottom:1px solid #004499;
+}
 #promotions{
     background-color: #004499;
 }
@@ -275,7 +299,7 @@ nav.fixed{
         margin-right: unset;
     }
     #promotions .wrap img{
-        margin-bottom: 5rem;
+        margin-bottom: 1.5rem;
     }
     #promotions .wrap img:last-child{
         margin-bottom: 0;
@@ -299,16 +323,21 @@ nav.fixed{
 }
 /* movie_information */
 #page{
-    padding:10rem 17px;
+    padding:88px 17px;
 }
 #page i{
     color: white;
     position: fixed;
-    top:5rem;
-    left:80%;
-    padding: 10px;
+    top:20px;
+    right:calc(50% - 576.5px);
+    padding:10px 17.5px;
     background-color: rgba(0, 0, 0, 0.719);
     border-radius: 3px;
+}
+@media (max-width:1250px){
+    #page i{
+        right:49.5px;
+    }
 }
 #youtube{
     background-color: #000;
@@ -319,21 +348,15 @@ nav.fixed{
     background-color: white;
 }
 
-#information .left_wrap{
-    width:32%;
-    float: left;
-    
+#information .w-md-38{
+    width:38.2%;
 }
-#information .left_wrap img{
-    width: 100%;
-    
+#information .w-md-62{
+    width:61.8%;
+    padding: 0 3rem;
 }
-#information .right_wrap{
-    width: 68%;
-    padding-left: 2rem;
-    float: right;
-    height: 100%;
-}
+
+
 @media (max-width:767px){
     #youtube{
         display: none;
@@ -341,16 +364,12 @@ nav.fixed{
     #information{
         padding-top: 0;
     }
-    #information .left_wrap{
+    #information .w-md-38{
         width: 100%;
-        float: none;
     }
-    #information .right_wrap{
+    #information .w-md-62{
         width: 100%;
-        float: none;
-        padding-left: 0;
     }
-    
 }
 
 .border-dashed{

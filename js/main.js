@@ -109,12 +109,6 @@ $(document).ready(function () {
 
 
 
-
-
-$(document).ready(function () {
-    $('#myModal').modal('hide');
-});
-
 // $('body').scrollspy({ target: 'nav' })
 function get_information() {
     $.getJSON("/json/information.json",
