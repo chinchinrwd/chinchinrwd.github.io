@@ -206,6 +206,7 @@ nav.fixed{
 }
 #promotions{
     background-color: #004499;
+    overflow: hidden;
 }
 
 #promotions .wrap{

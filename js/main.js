@@ -1,19 +1,20 @@
 
 $(document).ready(function () {
     
-    AOS.init();
+    AOS.init({
+        delay: 100
+    });
 
     $('.anchor').on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: Math.ceil($($.attr(this, 'href')).offset().top - 88)
-        }, 600);
+        }, 500);
         $('.collapse').collapse('hide')
     });
 
 });
-
-
+window.addEventListener('load', AOS.refresh);
 $(document).ready(function () {
     //initialize swiper when document ready
     var mySwiper = new Swiper('#home_swiper', {
@@ -113,11 +114,11 @@ $(document).ready(function () {
 
 
 // $('body').scrollspy({ target: 'nav' })
-function get_information() {
-    $.getJSON("/json/information.json",
-        function (data) {
-            console.log(data)
-        }
-    );
-}
+// function get_information() {
+//     $.getJSON("/json/information.json",
+//         function (data) {
+//             console.log(data)
+//         }
+//     );
+// }
 
