@@ -227,7 +227,7 @@ nav.fixed{
 
 
 #map {
-   height: 50vh;
+   
 }
 #map {
     background-attachment: fixed;
@@ -236,6 +236,9 @@ nav.fixed{
     background-repeat: no-repeat;
     background-position:center 180px;
     
+}
+#map img {
+    opacity: 0;
 }
 
 #footer{
@@ -324,6 +327,9 @@ nav.fixed{
     }
     #footer .contact{
         margin: 0 auto;
+    }
+    #map img {
+        opacity: 1;
     }
 }
 /* movie_information */
