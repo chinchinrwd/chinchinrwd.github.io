@@ -1,14 +1,18 @@
 
 $(document).ready(function () {
-    
+    //aos.js
     AOS.init({
-        delay: 100
+        delay: 100,
+        placement:'bottom-bottom'
     });
+    //錨點滑動
+    //先宣告才不會在mobile跑掉
+    var nav_height = $('.navbar').height();
 
     $('.anchor').on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({
-            scrollTop: Math.ceil($($.attr(this, 'href')).offset().top - 88)
+            scrollTop: Math.ceil($($.attr(this, 'href')).offset().top - nav_height)
         }, 500);
         $('.collapse').collapse('hide')
     });

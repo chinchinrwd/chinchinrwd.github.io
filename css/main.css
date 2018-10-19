@@ -1,6 +1,8 @@
+
 body{
     font-family: 微軟正黑體;
     position: relative;
+    
 }
 #page::-webkit-scrollbar { 
     display: none; 
@@ -115,9 +117,10 @@ nav.fixed{
 }
 #movie_time .filter-wrap{
     display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid white;
-    
+    justify-content: space-between;
+    float: right;
+    width: calc(25% - 30px);
+    margin-bottom: 2.5rem;
 }
 #movie_time .filter{ 
     padding: 3px 20px;
@@ -128,9 +131,6 @@ nav.fixed{
     background-color: rgba(255,255,255,0.7)
 }
 
-#movie_time .filter:first-child{
-    border-right: 1px solid white;
-}
 #movie_time .swiper-container{
     padding: 2.5rem 0;
 }
@@ -279,6 +279,10 @@ nav.fixed{
     #slide_1,#slide_2,#slide_3,#slide_4{
         height:40vh;
     }
+    #movie_time .filter-wrap{
+        width: 100%;
+    }
+
     #movie_time .filter{
         width: 50%;
         text-align: center;
