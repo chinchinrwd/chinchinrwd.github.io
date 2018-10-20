@@ -270,8 +270,11 @@ nav.fixed{
     .w-50-md-25{
         width: 50%;
     }
+    .py-my{
+        padding: 1.5rem 0;
+    }
     .title{
-        padding-top: 2rem;
+        padding-top: 0;
     }
     .nav-item{
         text-align: center;
