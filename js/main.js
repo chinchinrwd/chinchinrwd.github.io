@@ -117,12 +117,37 @@ $(document).ready(function () {
 
 
 
-// $('body').scrollspy({ target: 'nav' })
-// function get_information() {
-//     $.getJSON("/json/information.json",
-//         function (data) {
-//             console.log(data)
-//         }
-//     );
-// }
 
+function get_information(x) {
+    $.getJSON("/json/information.json",
+        function (data) {
+           var youtube = data[x].youtube + "?rel=0&amp;showinfo=0";
+            var img = "/img/poster/" + data[x].date +x +".jpg";
+            var eng_name = data[x].title;
+            var time = data[x].time;
+            var garding = "/img/Icon-" + data[x].分級 + ".png";
+            var director = data[x].導演;
+           $('#youtube iframe').attr('src',youtube);
+            $("#information img:first-child").attr('src',img);
+            $("#information h1").html(x);
+            $("#information h5").html(eng_name);
+            $('#time').html(time);
+            $("#information img:nth-child(2)").attr('src',garding);
+           $('#director').html(director);
+           
+        }
+    );
+}
+
+// this.children(".card-title").text
+
+$('#page').on('show.bs.modal', function (e) {
+    var btn =$(e.relatedTarget);
+    var target = $(btn).find(".card-title").html();
+    get_information(target);
+  })
+  $('#page').on('hide.bs.modal', function (e) {
+        $("#youtube iframe").attr("src","")
+
+
+  })
