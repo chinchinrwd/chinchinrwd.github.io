@@ -3,7 +3,7 @@ $(document).ready(function () {
     //aos.js
     AOS.init({
         delay: 100,
-        placement:'bottom-bottom'
+        placement: 'bottom-bottom'
     });
     //錨點滑動
     //先宣告才不會在mobile跑掉
@@ -112,7 +112,7 @@ $(document).ready(function () {
         }
 
     });
-    
+
 });
 
 
@@ -121,8 +121,8 @@ $(document).ready(function () {
 function get_information(x) {
     $.getJSON("/json/information.json",
         function (data) {
-           var youtube = data[x].youtube + "?rel=0&amp;showinfo=0";
-            var img = "/img/poster/" + data[x].date +x +".jpg";
+            var youtube = data[x].youtube + "?rel=0&amp;showinfo=0";
+            var img = "/img/poster/" + data[x].date + x + ".jpg";
             var eng_name = data[x].title;
             var time = data[x].time;
             var garding = "/img/Icon-" + data[x].分級 + ".png";
@@ -131,37 +131,44 @@ function get_information(x) {
             var plot = data[x].介紹;
             var actor = data[x].演員;
             var realease = data[x].放映;
-           $('#youtube iframe').attr('src',youtube);
-            $("#information img:first-child").attr('src',img);
+            $('#youtube iframe').attr('src', youtube);
+            $("#information img:first-child").attr('src', img);
             $("#information h1").html(x);
             $("#information h5").html(eng_name);
             $('#time').html(time);
-            $("#information img:nth-child(2)").attr('src',garding);
+            $("#information img:nth-child(2)").attr('src', garding);
             $('#date').html(date);
-           $('#director').html(director);
-           $('#plot').html(plot);
-           $("#actor p").empty();
-           $(actor).each(function (index, element) {
-               $('#actor').append("<p>" + element + "</p>")
-               
-           });
-           $('#realease').empty();
-           if(realease.一廳 != null){
-               $('#realease').append("<h3>一廳</h3>").append("<div class='d-flex flex-wrap' id='realease_1'></div>")
-               $(realease.一廳).each(function (index, element) {
-                   // element == this
-                   $('#realease_1').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
-               });
-           }
-           if(realease.二廳 != null){
-            $('#realease').append("<h3>二廳</h3>").append("<div class='d-flex flex-wrap' id='realease_2'></div>")
-            $(realease.一廳).each(function (index, element) {
-                // element == this
-                $('#realease_2').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
-            });
-        }
+            $('#director').html(director);
+            $('#plot').html(plot);
+            $("#actor p").empty();
+            $(actor).each(function (index, element) {
+                $('#actor').append("<p>" + element + "</p>")
 
-           
+            });
+            $('#realease').empty();
+            if (realease.一廳 != null) {
+                $('#realease').append("<h3>一廳</h3>").append("<div class='d-flex flex-wrap' id='realease_1'></div>")
+                $(realease.一廳).each(function (index, element) {
+                    // element == this
+                    $('#realease_1').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
+                });
+            }
+            if (realease.二廳 != null) {
+                $('#realease').append("<h3>二廳</h3>").append("<div class='d-flex flex-wrap' id='realease_2'></div>")
+                $(realease.一廳).each(function (index, element) {
+                    // element == this
+                    $('#realease_2').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
+                });
+            }
+            console.log(realease);
+            
+            if (realease == "敬請期待") {
+                $('#realease').append(
+                    $('<div>').addClass('h-100 bg-danger').append("<h3 class='text-center text-light'>敬請期待</h3>")
+                )
+            }
+
+
         }
     );
 }
@@ -169,12 +176,12 @@ function get_information(x) {
 // this.children(".card-title").text
 
 $('#page').on('show.bs.modal', function (e) {
-    var btn =$(e.relatedTarget);
+    var btn = $(e.relatedTarget);
     var target = $(btn).find(".card-title").html();
     get_information(target);
-  })
-  $('#page').on('hide.bs.modal', function (e) {
-        $("#youtube iframe").attr("src"," ")
+})
+$('#page').on('hide.bs.modal', function (e) {
+    $("#youtube iframe").attr("src", " ")
 
 
-  })
+})

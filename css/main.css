@@ -81,37 +81,50 @@ nav.fixed{
     text-shadow: -5px 0 2px black, 0 5px 2px black, 5px 0 2px black, 0 -5px 2px black;
 
 }
+
 #home .swiper-pagination{
     position: static;
 }
 #home .swiper-pagination-bullet{
     margin: 0 1rem;
 }
+#home h1{
+    font-size: 60px;
+}
 #slide_1{
     background-image: url('/img/banner/一個巨星的誕生banner.jpg');
     background-size: cover;
     background-position: 70% center;
+    height: 28vw;
+    display: flex;
+    align-items: center;    
 }
 #slide_2{
     background-image: url('/img/banner/怪物遊戲2banner.jpg');
     background-size: cover;
     background-position: 70% center;
+    height: 28vw;
+    display: flex;
+    align-items: center; 
 }
 #slide_3{
-    background-image: url('/img/banner/怪獸與格林戴華banner.jpg');
+    background-image: url('/img/banner/月光光新慌慌banner.jpg');
     background-size: cover;
-    background-position: 70% center;
+    background-position: 80% center;
+    height: 28vw;
+    display: flex;
+    align-items: center; 
 }
 #slide_4{
     background-image: url('/img/banner/登月先鋒banner.jpg');
     background-size: cover;
     background-position: 90% center;
+    height: 28vw;
+    display: flex;
+    align-items: center; 
 }
 
-#home img{
-    opacity: 0;
-    width: 100%;
-}
+
 #movie_time{
     background-color: #000;
 }
@@ -288,7 +301,7 @@ nav.fixed{
         text-align: center;
     }
     #slide_1,#slide_2,#slide_3,#slide_4{
-        height:40vh;
+        height:58vh;
     }
     #movie_time .filter-wrap{
         width: 100%;
@@ -375,7 +388,7 @@ nav.fixed{
     background-color: white;
 }
 #information img:first-child{
-    width: 100%;
+    width: 80%;
 }
 #information img:nth-child(2){
     width: 50px;
@@ -402,9 +415,6 @@ nav.fixed{
     }
     #information{
         padding-top: 0;
-    }
-    #information img:first-child{
-        width:80%;
     }
     #information .w-md-38{
         width: 100%;
