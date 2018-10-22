@@ -126,14 +126,41 @@ function get_information(x) {
             var eng_name = data[x].title;
             var time = data[x].time;
             var garding = "/img/Icon-" + data[x].分級 + ".png";
+            var date = data[x].date;
             var director = data[x].導演;
+            var plot = data[x].介紹;
+            var actor = data[x].演員;
+            var realease = data[x].放映;
            $('#youtube iframe').attr('src',youtube);
             $("#information img:first-child").attr('src',img);
             $("#information h1").html(x);
             $("#information h5").html(eng_name);
             $('#time').html(time);
             $("#information img:nth-child(2)").attr('src',garding);
+            $('#date').html(date);
            $('#director').html(director);
+           $('#plot').html(plot);
+           $("#actor p").empty();
+           $(actor).each(function (index, element) {
+               $('#actor').append("<p>" + element + "</p>")
+               
+           });
+           $('#realease').empty();
+           if(realease.一廳 != null){
+               $('#realease').append("<h3>一廳</h3>").append("<div class='d-flex flex-wrap' id='realease_1'></div>")
+               $(realease.一廳).each(function (index, element) {
+                   // element == this
+                   $('#realease_1').append("<span class='m-3 p-3 bg-danger text-light rounded'>" + element + "</span>")
+               });
+           }
+           if(realease.二廳 != null){
+            $('#realease').append("<h3>二廳</h3>").append("<div class='d-flex flex-wrap' id='realease_2'></div>")
+            $(realease.一廳).each(function (index, element) {
+                // element == this
+                $('#realease_2').append("<span class='m-3 p-3 bg-danger text-light rounded'>" + element + "</span>")
+            });
+        }
+
            
         }
     );

@@ -347,7 +347,7 @@ nav.fixed{
     color: white;
     position: fixed;
     top:20px;
-    
+    z-index: 5;
     padding:10px 17.5px;
     background-color: rgba(0, 0, 0, 0.719);
     border-radius: 3px;
