@@ -150,14 +150,14 @@ function get_information(x) {
                $('#realease').append("<h3>一廳</h3>").append("<div class='d-flex flex-wrap' id='realease_1'></div>")
                $(realease.一廳).each(function (index, element) {
                    // element == this
-                   $('#realease_1').append("<span class='m-3 p-3 bg-danger text-light rounded'>" + element + "</span>")
+                   $('#realease_1').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
                });
            }
            if(realease.二廳 != null){
             $('#realease').append("<h3>二廳</h3>").append("<div class='d-flex flex-wrap' id='realease_2'></div>")
             $(realease.一廳).each(function (index, element) {
                 // element == this
-                $('#realease_2').append("<span class='m-3 p-3 bg-danger text-light rounded'>" + element + "</span>")
+                $('#realease_2').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
             });
         }
 
@@ -174,7 +174,7 @@ $('#page').on('show.bs.modal', function (e) {
     get_information(target);
   })
   $('#page').on('hide.bs.modal', function (e) {
-        $("#youtube iframe").attr("src","")
+        $("#youtube iframe").attr("src"," ")
 
 
   })
