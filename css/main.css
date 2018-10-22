@@ -41,12 +41,11 @@ nav.fixed{
 }
 .nav-item{
     font-size: 1.1rem;
+    position: relative;
+    transition: 0.5s;
 }
-.nav-item:hover{
-   position: relative;
-   transition: 1s;
-  }
-  .nav-item:hover::after{
+
+/* .nav-item:hover::after{
       content: '';
       position: absolute;
       bottom: 0;
@@ -55,10 +54,28 @@ nav.fixed{
     height: 30px;
     width: 30px;
     
-   }
+} */
+
+.nav-item:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+  transition: 0.5s;
+}
+.nav-item:hover:after {
+  width: 100%;
+}
 
 .nav-item.active{
     background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 4px;
 }
 #home{
     padding-top: 88px;
@@ -139,7 +156,10 @@ nav.fixed{
     padding: 3px 20px;
     color: white;
     cursor: pointer;
+    position: relative;
 }
+
+
 #movie_time .filter:hover{
     background-color: rgba(255,255,255,0.7)
 }
@@ -172,6 +192,9 @@ nav.fixed{
 }
 #movie_time .swiper-button-next{
     right: 0;
+}
+.card{
+    cursor: pointer;
 }
 .card:hover{
     background-color: unset;
