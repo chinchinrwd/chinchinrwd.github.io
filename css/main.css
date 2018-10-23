@@ -29,8 +29,7 @@ body{
 
 }
 nav{
-    transition: 1s;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: #004499;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.36),0 2px 10px 0 rgba(0,0,0,0.22)!important;
 }
 nav.fixed{
@@ -76,7 +75,7 @@ nav.fixed{
 }
 
 .nav-item.active{
-    background-color:#197FFF;
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 4px;
 }
 #home{
@@ -155,11 +154,10 @@ nav.fixed{
     margin-bottom: 2.5rem;
 }
 #movie_time .filter{ 
-    padding: 8px 20px;
+    padding: 3px 20px;
     color: white;
     cursor: pointer;
     position: relative;
-    border-radius: 4px;
 }
 
 
@@ -329,7 +327,6 @@ nav.fixed{
     }
     .nav-item{
         text-align: center;
-        padding: 1rem 0;
     }
     #slide_1,#slide_2,#slide_3,#slide_4{
         height:58vh;
@@ -381,7 +378,7 @@ nav.fixed{
     #footer img{
         width: 80px;
     }
-    #footer #statement{
+    #footer a{
         display: none;
     }
     #footer .contact{
