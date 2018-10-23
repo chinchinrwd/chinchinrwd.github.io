@@ -16,9 +16,27 @@ $(document).ready(function () {
         }, 500);
         $('.collapse').collapse('hide')
     });
-
 });
+
+$(window).scroll(function () {
+    if($('nav').css("background-color") == "rgba(0, 0, 0, 0.95)"){
+        if ($(window).scrollTop() > $('#ticket_price').offset().top - $('.navbar').height()) {       
+            $('nav').css("background-color", "#004499");   
+    } 
+    }
+    if($('nav').css("background-color") == "rgb(0, 68, 153)"){
+        if($(window).scrollTop() < $('#ticket_price').offset().top - $('.navbar').height()){
+        
+            $('nav').css("background-color", "rgba(0, 0, 0, 0.95)");
+        }
+    }
+    
+});
+
+
+//aos.js
 window.addEventListener('load', AOS.refresh);
+//swiper
 $(document).ready(function () {
     //initialize swiper when document ready
     var mySwiper = new Swiper('#home_swiper', {
@@ -30,20 +48,20 @@ $(document).ready(function () {
         },
 
         // If we need pagination
-        pagination: {
-            el: '#home_swiper .swiper-pagination',
-        },
+        // pagination: {
+        //     el: '#home_swiper .swiper-pagination',
+        // },
 
         // Navigation arrows
-        navigation: {
-            nextEl: '#home_swiper .swiper-button-next',
-            prevEl: '#home_swiper .swiper-button-prev',
-        },
+        // navigation: {
+        //     nextEl: '#home_swiper .swiper-button-next',
+        //     prevEl: '#home_swiper .swiper-button-prev',
+        // },
 
         // And if we need scrollbar
-        scrollbar: {
-            el: '#home_swiper .swiper-scrollbar',
-        }
+        // scrollbar: {
+        //     el: '#home_swiper .swiper-scrollbar',
+        // }
     })
 });
 
@@ -97,6 +115,7 @@ $(document).ready(function () {
     })
 });
 
+//movie time fliter
 $(document).ready(function () {
     $(('#movie_time_swiper2')).addClass('d-none');
     $('.filter').click(function (e) {
@@ -116,7 +135,7 @@ $(document).ready(function () {
 });
 
 
-
+//movie information get
 
 function get_information(x) {
     $.getJSON("/json/information.json",
@@ -160,8 +179,6 @@ function get_information(x) {
                     $('#realease_2').append("<span class='m-3 p-3 bg-danger text-light rounded shadow'>" + element + "</span>")
                 });
             }
-            console.log(realease);
-            
             if (realease == "敬請期待") {
                 $('#realease').append(
                     $('<div>').addClass('h-100 bg-danger').append("<h3 class='text-center text-light'>敬請期待</h3>")
@@ -182,6 +199,4 @@ $('#page').on('show.bs.modal', function (e) {
 })
 $('#page').on('hide.bs.modal', function (e) {
     $("#youtube iframe").attr("src", " ")
-
-
 })
