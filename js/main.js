@@ -181,7 +181,7 @@ function get_information(x) {
             }
             if (realease == "敬請期待") {
                 $('#realease').append(
-                    $('<div>').addClass('h-100 bg-danger').append("<h3 class='text-center text-light'>敬請期待</h3>")
+                    $('<div>').addClass('h-100 coming_soon')
                 )
             }
 

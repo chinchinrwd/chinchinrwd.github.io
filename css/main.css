@@ -435,6 +435,12 @@ nav.fixed{
 #information .shadow{
     box-shadow: 0.1rem .1rem .5rem rgba(0,0,0,.55)!important;
 }
+#information .coming_soon{
+    background-image: url('/img/Coming-Soon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y:center; 
+}
 
 
 @media (max-width:767px){
