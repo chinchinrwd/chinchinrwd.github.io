@@ -106,6 +106,11 @@ nav.fixed{
 }
 #home .swiper-pagination-bullet{
     margin: 0 1rem;
+    background-color: white;
+    opacity: 1;
+}
+#home .swiper-pagination-bullet-active{
+    background-color: #dc3545;
 }
 #home h1{
     font-size: 60px;
@@ -145,7 +150,7 @@ nav.fixed{
 
 
 #movie_time{
-    background-color: #000;
+    background-color: rgb(7,0,53);
 }
 #movie_time .filter-wrap{
     display: flex;
@@ -180,7 +185,7 @@ nav.fixed{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(7, 0, 53, 0.7);
     cursor: unset;
 }
 #movie_time .swiper-button-next-item,#movie_time .swiper-button-prev-item{
@@ -279,10 +284,11 @@ nav.fixed{
 
 #map {
     background-attachment: fixed;
-    background-image: url(/img/map.png);
+    background-image: url(/img/chinchinmap.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center 180px;
+
     
 }
 #map img {
@@ -290,7 +296,7 @@ nav.fixed{
 }
 
 #footer{
-    background-color: #004499;
+    background-color: rgb(7,0,53);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.36),0 2px 10px 0 rgba(0,0,0,0.22)!important;
 }
 #footer .container-fluid{
