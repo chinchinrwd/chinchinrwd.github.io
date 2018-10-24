@@ -48,10 +48,9 @@ $(document).ready(function () {
         },
 
         // If we need pagination
-        pagination: {
-            el: '#home_swiper .swiper-pagination',
-            clickable :true,
-        },
+        // pagination: {
+        //     el: '#home_swiper .swiper-pagination',
+        // },
 
         // Navigation arrows
         // navigation: {
