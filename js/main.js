@@ -142,6 +142,7 @@ function get_information(x) {
     $.getJSON("/json/information.json",
         function (data) {
             var youtube = data[x].youtube + "?rel=0&amp;showinfo=0";
+            var youtube_href = data[x].youtube.replace("embed/","watch?v=");
             var img = "/img/poster/" + data[x].date + x + ".jpg";
             var eng_name = data[x].title;
             var time = data[x].time;
@@ -152,9 +153,10 @@ function get_information(x) {
             var actor = data[x].演員;
             var realease = data[x].放映;
             $('#youtube iframe').attr('src', youtube);
-            $("#information img:first-child").attr('src', img);
+            $("#img").attr('src', img);
             $("#information h1").html(x);
             $("#information h5").html(eng_name);
+            $('#youtube_icon').attr('href',youtube_href);
             $('#time').html(time);
             $("#information img:nth-child(2)").attr('src', garding);
             $('#date').html(date);

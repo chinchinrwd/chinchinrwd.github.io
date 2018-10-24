@@ -414,6 +414,7 @@ nav.fixed{
     }
 }
 
+
 #youtube{
     background-color: #000;
     padding-bottom: 2.5rem;
@@ -422,15 +423,18 @@ nav.fixed{
     padding: 2.5rem 0;
     background-color: white;
 }
-#information img:first-child{
+#img{
     width: 80%;
+}
+#youtube_icon{
+    display: none;
 }
 #information img:nth-child(2){
     width: 50px;
     border-radius: 5px;
     box-shadow: -0.1rem .1rem .3rem rgba(0,0,0,.55)!important;
-
 }
+
 #information .w-md-38{
     width:38.2%;
 }
@@ -457,6 +461,10 @@ nav.fixed{
     #information{
         padding-top: 0;
     }
+    #youtube_icon{
+        display: block;
+    }
+   
     #information .w-md-38{
         width: 100%;
     }
